@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 36px;
+}
+
+.footer__column {
+  border-top: 1px rgba(33, 33, 33, 0.4) solid;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__content {
+  color: #212121;
+  opacity: 70%;
+  padding: 60px 0;
+  margin: auto 0;
+}
+
+@media screen and (max-width: 630px) {
+  .footer {
+    padding-top: 20px;
+  }
+
+  .footer__column {
+    border-top: 1px rgba(33, 33, 33, 0.4) solid;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__content {
+    color: #212121;
+    opacity: 70%;
+    padding: 60px 0;
+    margin: auto 0;
+  }
+}

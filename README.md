@@ -1,21 +1,21 @@
-# Project 3: Spots
+# Spots
 
-### Overview  
+## Overview
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+The Spots project was created as a gallery for the user to be able to store their images they'd like to showcase. The project was developed with responsiveness in mind, meaning that this can work on the most popular screen sizes, including tablets and mobile phones.
+
+### Technology
+
+This was used with basic HTML and CSS inclduing grids, flex containers, as well as media queries to allow for responsive design.
+
+### Images
+
+![Spots Project](./images/spots_image.jpg)
+
+### Deployment
+
+This was deployed on GitHub Pages. View this project [here](https://danacorona.github.io/se_project_spots/).
+
+#### Figma
+
+- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)

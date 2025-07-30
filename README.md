@@ -19,3 +19,7 @@ This was deployed on GitHub Pages. View this project [here](https://danacorona.g
 #### Figma
 
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+
+### Video
+
+You can learn more about this project by visiting [here](https://drive.google.com/file/d/1WmjDrIbqm-YNpAi_09PE94G8czBFh7My/view?usp=sharing).

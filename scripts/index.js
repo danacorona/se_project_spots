@@ -48,6 +48,12 @@ let profileDescription = document.querySelector(".profile__description");
 let imageLinkInput = newPostModal.querySelector("#card-image-input");
 let captionInput = newPostModal.querySelector("#card-caption-input");
 
+const cardTemplate = document
+  .querySelector("#card-template")
+  .content.querySelector(".card");
+
+const cardsList = document.querySelector(".cards__list");
+
 editProfileBtn.addEventListener("click", function () {
   openModal(editProfileModal);
   editProfileNameInput.value = profileName.textContent;
@@ -94,7 +100,19 @@ function openModal(modalType) {
   modalType.classList.add("modal_is-opened");
 }
 
+function getCardElement(data) {
+  const cardElement = cardTemplate.cloneNode(true);
+  let cardTitle = cardElement.querySelector(".card__title");
+  let cardImage = cardElement.querySelector(".card__image");
+
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  cardTitle.textContent = data.name;
+  return cardElement;
+}
+
 initialCards.forEach(function (item) {
-  console.log(item.name);
-  console.log(item.link);
+  const newCard = getCardElement(item);
+  console.log(newCard);
+  cardsList.prepend(newCard);
 });

@@ -83,12 +83,13 @@ function handleEditProfileSubmit(evt) {
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  console.log(
-    "Image Link Output: " +
-      imageLinkInput.value +
-      "\nCaption Output: " +
-      captionInput.value
-  );
+  const newPostData = {
+    name: captionInput.value,
+    link: imageLinkInput.value,
+  };
+  const addCard = getCardElement(newPostData);
+
+  cardsList.prepend(addCard);
   closeModal(newPostModal);
 }
 
@@ -105,6 +106,12 @@ function getCardElement(data) {
   let cardTitle = cardElement.querySelector(".card__title");
   let cardImage = cardElement.querySelector(".card__image");
 
+  let cardLikeElement = cardElement.querySelector(".card__like-btn");
+
+  cardLikeElement.addEventListener("click", function () {
+    cardLikeElement.classList.toggle("card__like-btn_active");
+  });
+
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardTitle.textContent = data.name;
@@ -113,6 +120,5 @@ function getCardElement(data) {
 
 initialCards.forEach(function (item) {
   const newCard = getCardElement(item);
-  console.log(newCard);
   cardsList.prepend(newCard);
 });

@@ -23,7 +23,12 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
+  {
+    name: "Golden Gate Bridge",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
 ];
+
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -47,6 +52,12 @@ let profileDescription = document.querySelector(".profile__description");
 
 let imageLinkInput = newPostModal.querySelector("#card-image-input");
 let captionInput = newPostModal.querySelector("#card-caption-input");
+
+const previewModal = document.querySelector("#preview-modal");
+const modalCloseBtn = previewModal.querySelector(".modal__close-btn");
+modalCloseBtn.addEventListener("click", function () {
+  closeModal(previewModal);
+});
 
 const cardTemplate = document
   .querySelector("#card-template")
@@ -105,11 +116,24 @@ function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   let cardTitle = cardElement.querySelector(".card__title");
   let cardImage = cardElement.querySelector(".card__image");
+  let cardLikeButton = cardElement.querySelector(".card__like-btn");
+  let deleteBtn = cardElement.querySelector(".card__delete-btn");
 
-  let cardLikeElement = cardElement.querySelector(".card__like-btn");
+  cardImage.addEventListener("click", function () {
+    openModal(previewModal);
+    let modalImage = previewModal.querySelector(".modal__image");
+    let modalCaption = previewModal.querySelector(".modal__caption");
+    modalImage.src = cardImage.src;
+    modalImage.alt = cardImage.alt;
+    modalCaption.textContent = cardImage.alt;
+  });
 
-  cardLikeElement.addEventListener("click", function () {
-    cardLikeElement.classList.toggle("card__like-btn_active");
+  cardLikeButton.addEventListener("click", function () {
+    cardLikeButton.classList.toggle("card__like-btn_active");
+  });
+
+  deleteBtn.addEventListener("click", function () {
+    cardElement.remove();
   });
 
   cardImage.src = data.link;

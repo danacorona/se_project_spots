@@ -32,8 +32,6 @@ const initialCards = [
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
-const editProfileSubmitBtn =
-  editProfileModal.querySelector(".modal__submit-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 let editProfileNameInput = editProfileModal.querySelector(
   "#profile-name-input"
@@ -50,8 +48,8 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 let profileName = document.querySelector(".profile__name");
 let profileDescription = document.querySelector(".profile__description");
 
-let imageLinkInput = newPostModal.querySelector("#card-image-input");
-let captionInput = newPostModal.querySelector("#card-caption-input");
+const imageLinkInput = newPostModal.querySelector("#card-image-input");
+const captionInput = newPostModal.querySelector("#card-caption-input");
 
 const previewModal = document.querySelector("#preview-modal");
 const modalCloseBtn = previewModal.querySelector(".modal__close-btn");
@@ -102,6 +100,7 @@ function handleNewPostSubmit(evt) {
 
   cardsList.prepend(addCard);
   closeModal(newPostModal);
+  newPostForm.reset();
 }
 
 function closeModal(modalType) {
@@ -118,11 +117,11 @@ function getCardElement(data) {
   let cardImage = cardElement.querySelector(".card__image");
   let cardLikeButton = cardElement.querySelector(".card__like-btn");
   let deleteBtn = cardElement.querySelector(".card__delete-btn");
+  let modalImage = previewModal.querySelector(".modal__image");
+  let modalCaption = previewModal.querySelector(".modal__caption");
 
   cardImage.addEventListener("click", function () {
     openModal(previewModal);
-    let modalImage = previewModal.querySelector(".modal__image");
-    let modalCaption = previewModal.querySelector(".modal__caption");
     modalImage.src = cardImage.src;
     modalImage.alt = cardImage.alt;
     modalCaption.textContent = cardImage.alt;

@@ -21,6 +21,10 @@
   border-radius: 8px;
 }
 
+.card__image:hover {
+  cursor: pointer;
+}
+
 .card__like-btn {
   background-image: url("../images/heart.svg");
   width: 23px;
@@ -68,7 +72,7 @@
   margin-top: 12px;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 630px) {
   .card {
     max-width: 288px;
   }

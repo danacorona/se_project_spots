@@ -57,7 +57,7 @@
             <img src="./images/closebtn.png" alt="" />
           </button>
           <h2 class="modal__title">Edit Profile</h2>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label">
               Name
               <input
@@ -69,7 +69,7 @@
                 maxlength="40"
                 required
               />
-              <span class="modal__error"></span>
+              <span class="modal__error profile-name-input-error"></span>
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
@@ -82,9 +82,15 @@
                 maxlength="200"
                 required
               />
-              <span class="modal__error"></span>
+              <span class="modal__error profile-description-input-error"></span>
             </label>
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button
+              type="submit"
+              class="modal__submit-btn"
+              id="edit-profile-submit-btn"
+            >
+              Save
+            </button>
           </form>
         </div>
       </div>
@@ -94,7 +100,7 @@
             <img src="./images/closebtn.png" alt="" />
           </button>
           <h2 class="modal__title">New Post</h2>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <label for="card-image-input" class="modal__label">
               Image link
               <input
@@ -104,7 +110,7 @@
                 placeholder="Paste a link to the picture"
                 required
               />
-              <span class="modal__error"></span>
+              <span class="modal__error card-image-input-error"></span>
             </label>
             <label for="card-caption-input" class="modal__label">
               Caption
@@ -117,14 +123,20 @@
                 maxlength="30"
                 required
               />
-              <span class="modal__error"></span>
+              <span class="modal__error card-caption-input-error"></span>
             </label>
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button
+              type="submit"
+              class="modal__submit-btn"
+              id="new-post-submit-btn"
+            >
+              Save
+            </button>
           </form>
         </div>
       </div>
       <div class="modal modal_type_preview" id="preview-modal">
-        <div class="modal__image-container">
+        <div class="preview-modal-container">
           <button
             type="button"
             class="modal__close-btn modal__close-btn_type_preview"

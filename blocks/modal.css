@@ -93,6 +93,11 @@
   font-size: 16px;
   font-weight: 500;
 }
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.7);
+}
+
 .modal__submit-btn {
   background-color: #212121;
   color: #fcf5e5;
@@ -107,7 +112,11 @@
   background-color: #212121cc;
 }
 
-.modal__image-container {
+.modal__submit-btn_disabled {
+  opacity: 50%;
+}
+
+.preview-modal-container {
   margin: auto 0;
   position: relative;
 }

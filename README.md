@@ -20,6 +20,9 @@ This was deployed on GitHub Pages. View this project [here](https://danacorona.g
 
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
 
-### Video
+### Project Pitch Videos
 
-You can learn more about this project by visiting [here](https://drive.google.com/file/d/1WmjDrIbqm-YNpAi_09PE94G8czBFh7My/view?usp=sharing).
+Check out these videos where I have descibed my project as well as the challenges faced while building it.
+[Early Stages of Development](https://drive.google.com/file/d/1WmjDrIbqm-YNpAi_09PE94G8czBFh7My/view?usp=sharing)
+
+[Stages of Implementing Javascript Validation](https://drive.google.com/file/d/1jNJ2SBG2usLzSfmCqFLqeSmm6Ygx92iu/view?usp=sharing)
